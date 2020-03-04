@@ -48,8 +48,15 @@ li {
 }
 
 a {
+  font-weight: bold;
   color: #000000;
   text-decoration: underline;
+}
+
+a:hover {
+  font-weight: bold;
+  color: #5522fa;
+  text-decoration-color: #5fddc5;
 }
 
 .wrapper {
@@ -114,5 +121,12 @@ a {
 }
 
 .inactive a {
+  font-weight: bold;
   color: #d9d9d9;
+}
+
+.inactive a:hover {
+  color: #5522fa;
+  font-weight: bold;
+  text-decoration-color: #5fddc5;
 }
