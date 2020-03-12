@@ -130,3 +130,48 @@ a:hover {
   font-weight: bold;
   text-decoration-color: #5fddc5;
 }
+
+.container {
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.year {
+  font-weight: bold;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 20px;
+}
+
+.month {
+  font-weight: bold;
+  margin: 0;
+  padding: 0;
+  /* margin-bottom: 20px; */
+}
+
+.month-right {
+  position: absolute;
+  right: 0;
+}
+
+.list-blog {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 80px;
+}
+
+.list-blog-item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.list-blog-text {
+  margin: 0;
+  padding: 0;
+
+  color: #A9A9A9;
+}
+
