@@ -59,6 +59,11 @@ a:hover {
   text-decoration-color: #5fddc5;
 }
 
+.funbox a:hover {
+  color: #023300;
+  text-decoration-color: #bccf01;
+}
+
 .wrapper {
   max-width: 760px;
   margin: 0 auto;
