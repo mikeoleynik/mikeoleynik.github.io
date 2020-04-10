@@ -7,6 +7,11 @@ body {
   font-family: 'Montserrat', sans-serif;
 }
 
+.knewave {
+  font-family: 'Knewave', cursive;
+  color: #fb4238;
+}
+
 header {
   position: relative;
   margin-top: 30px;
@@ -55,8 +60,8 @@ a {
 
 a:hover {
   font-weight: bold;
-  color: #5522fa;
-  text-decoration-color: #5fddc5;
+  color: #fb4238;
+  text-decoration-color: #03a298;
 }
 
 .funbox a:hover {
@@ -131,9 +136,9 @@ a:hover {
 }
 
 .inactive a:hover {
-  color: #5522fa;
+  color: #fb4238;
   font-weight: bold;
-  text-decoration-color: #5fddc5;
+  text-decoration-color: #03a298;
 }
 
 .container {
