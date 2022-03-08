@@ -185,6 +185,16 @@ a:hover {
   color: #A9A9A9;
 }
 
+.img-center {
+  display: block;
+  width: 300px;
+  margin: 0 auto;
+}
+
+.footer-shrug {
+  text-align: center;
+}
+
 .colors {
   /* color: #df4442; */
   /* color: #bfdbe2; */
@@ -198,4 +208,3 @@ a:hover {
   /* color: #ed5e42 */
   /* color: #17c67a */
 }
-
