@@ -4,31 +4,6 @@ body {
   font-family: 'Work Sans', sans-serif;
 }
 
-.wrapper--russian {
-  font-family: 'Montserrat', sans-serif;
-}
-
-.yagni {
-  letter-spacing: 5px;
-  color: #193a6f;
-  font-family: 'Source Code Pro', monospace;
-}
-
-.yagni a {
-  text-decoration: none;
-}
-
-.yagni a:hover {
-  text-decoration: underline;
-  color: #193a6f;
-  text-decoration-color: #fb9b50;
-}
-
-.yagni-maybe a:hover {
-  color: #193a6f;
-  text-decoration-color: #fb9b50;
-}
-
 header {
   position: relative;
   margin-top: 30px;
@@ -163,44 +138,6 @@ a:hover {
   justify-content: space-between;
 }
 
-.year {
-  font-weight: bold;
-  margin: 0;
-  padding: 0;
-  margin-bottom: 20px;
-}
-
-.month {
-  font-weight: bold;
-  margin: 0;
-  padding: 0;
-  /* margin-bottom: 20px; */
-}
-
-.month-right {
-  position: absolute;
-  right: 0;
-}
-
-.list-blog {
-  margin: 0;
-  padding: 0;
-  margin-bottom: 80px;
-}
-
-.list-blog-item {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 20px;
-}
-
-.list-blog-text {
-  margin: 0;
-  padding: 0;
-
-  color: #A9A9A9;
-}
-
 .img-center {
   display: block;
   width: 300px;
@@ -209,8 +146,4 @@ a:hover {
 
 .footer-shrug {
   text-align: center;
-}
-
-.colors {
-
 }
