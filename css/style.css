@@ -147,3 +147,150 @@ a:hover {
 .footer-shrug {
   text-align: center;
 }
+
+/* edctn */
+.bg-edctn {
+  background-color: #fcf5f3;
+  background-image: url(../img/edctn_background.png);
+  background-repeat: repeat;
+  background-position: 215px 0;
+  background-attachment: fixed;
+}
+
+.edctn-title {
+  font-weight: bold;
+  background-size: 100%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-image: linear-gradient(123.97deg,#4fd8ab 10.62%,#5ea1e7 43.12%,#8375d0 89.61%);
+}
+
+.bg-edctn a {
+  font-weight: bold;
+  color: #3d3b47;
+  text-decoration: none;
+}
+
+.bg-edctn a:hover {
+  font-weight: bold;
+  color: #3d3b47;
+  text-decoration: underline;
+}
+
+/* spoapo */
+.bg-spoapo {
+  background-color: #61609a;
+  background-image: url(../img/bg_spoapo.png);
+  color: #fcf5f3;
+}
+
+.spoapo-title {
+  font-weight: bold;
+  color: #f9cc73;
+}
+
+.bg-spoapo ::selection {
+  background: #f9cc73;
+  color: #61609a;
+}
+
+.bg-spoapo a {
+  font-weight: bold;
+  color: #fcf5f3;
+  text-decoration: none;
+}
+
+.bg-spoapo a:hover {
+  font-weight: bold;
+  color: #fcf5f3;
+  text-decoration-color: #fcf5f3;
+  text-decoration: underline;
+}
+
+/* podkova */
+.bg-podkova {
+  background-color: #161930; /* #161930 #1d1f2f #171B29 #161a2f */
+  color: #EEE3C1;
+}
+
+.podkova-title {
+  font-weight: bold;
+  color: #D0021B;
+}
+
+.bg-podkova ::selection {
+  background: #D0021B;
+  color: #EEE3C1;
+ }
+
+ .bg-podkova a {
+  font-weight: bold;
+  color: #EEE3C1;
+  text-decoration: none;
+}
+
+.bg-podkova a:hover {
+  font-weight: bold;
+  color: #EEE3C1;
+  text-decoration: underline;
+}
+
+/* sestra.ai */
+.bg-blue {
+  background-color: #cfe0ff;
+}
+
+.sestra-title {
+  font-weight: bold;
+  color: #293872;
+}
+
+.bg-blue ::selection {
+  background: #293872;
+  color: #cfe0ff;
+ }
+
+.bg-blue a {
+  font-weight: bold;
+  color: #293872;
+  text-decoration: none;
+}
+
+.bg-blue a:hover {
+  font-weight: bold;
+  color: #293872;
+  text-decoration: underline;
+}
+
+/* dom */
+.bg-dom {
+  background-color: #f4f0e7;
+  background-image: url(../img/bg_spoapo.png);
+  color: #ff7d56;
+}
+
+.dom-title {
+  font-weight: bold;
+  color: #ff3c00;
+}
+
+.bg-dom ::selection {
+  background: #ff3c00;
+  color: #fff;
+ }
+
+/* chat */
+.bg-chat {
+  background-color: #344a4c ;
+  color: #fefae0;
+}
+
+.bg-chat ::selection {
+  background: #809778;
+  color: #fff;
+ }
+
+.chat-title {
+  font-weight: bold;
+  color: #ff8370;
+}
