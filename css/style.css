@@ -207,29 +207,29 @@ a:hover {
   text-decoration: underline;
 }
 
-/* podkova */
-.bg-podkova {
+/* weighbull */
+.bg-weighbull {
   background-color: #161930; /* #161930 #1d1f2f #171B29 #161a2f */
   color: #EEE3C1;
 }
 
-.podkova-title {
+.weighbull-title {
   font-weight: bold;
-  color: #D0021B;
+  color: #eb1830;
 }
 
-.bg-podkova ::selection {
-  background: #D0021B;
+.bg-weighbull ::selection {
+  background: #eb1830;
   color: #EEE3C1;
  }
 
- .bg-podkova a {
+ .bg-weighbull a {
   font-weight: bold;
   color: #EEE3C1;
   text-decoration: none;
 }
 
-.bg-podkova a:hover {
+.bg-weighbull a:hover {
   font-weight: bold;
   color: #EEE3C1;
   text-decoration: underline;
@@ -262,22 +262,34 @@ a:hover {
   text-decoration: underline;
 }
 
-/* dom */
-.bg-dom {
+/* layt */
+.bg-layt {
   background-color: #f4f0e7;
   background-image: url(../img/bg_spoapo.png);
   color: #ff7d56;
 }
 
-.dom-title {
+.layt-title {
   font-weight: bold;
   color: #ff3c00;
 }
 
-.bg-dom ::selection {
+.bg-layt ::selection {
   background: #ff3c00;
   color: #fff;
  }
+
+ .bg-layt a {
+  font-weight: bold;
+  color: #ff7d56;
+  text-decoration: none;
+}
+
+.bg-layt a:hover {
+  font-weight: bold;
+  color: #ff7d56;
+  text-decoration: underline;
+}
 
 /* chat */
 .bg-chat {
