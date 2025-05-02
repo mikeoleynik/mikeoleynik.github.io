@@ -52,8 +52,8 @@ a {
 
 a:hover {
   font-weight: bold;
-  color: #ed5e42;
-  text-decoration-color: #2798c4;
+  color: #f05a25;
+  text-decoration-color: #3fa9f6;
 }
 
 .funbox a:hover {
@@ -62,7 +62,7 @@ a:hover {
 }
 
 .wrapper {
-  max-width: 760px;
+  max-width: 920px;
   margin: 0 auto;
   padding-left: 20px;
   padding-right: 20px;
@@ -73,6 +73,8 @@ a:hover {
 .sub {
   font-size: 20px;
   font-weight: 400;
+  display: inline-block;
+  margin-bottom: 0.5rem;
 }
 
 .language {
@@ -90,6 +92,23 @@ a:hover {
 .rool {
   margin: 0;
   padding: 0;
+  list-style: none;
+}
+
+.rool li i {
+  margin-right: 8px;
+  color: #444;
+}
+
+.contact-columns {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.column {
+  flex: 1 1 200px;
+  min-width: 200px;
 }
 
 .rool--open-source {
@@ -119,17 +138,17 @@ a:hover {
 }
 
 .inactive {
-  color: #e6e9f2;
+  color: #cacedb;
 }
 
 .inactive a {
   font-weight: bold;
-  color: #e6e9f2;
+  color: #cacedb;
 }
 
 .inactive a:hover {
-  color: #ed5e42;
-  text-decoration-color: #2798c4;
+  color: #f05a25;
+  text-decoration-color: #3fa9f6;
   font-weight: bold;
 }
 
