@@ -12,7 +12,17 @@ header {
 }
 
 footer {
-  margin-bottom: 90px;
+  margin-bottom: 40px;
+}
+
+.signature {
+  text-align: center;
+  margin: 24px auto 40px;
+}
+
+.signature img {
+  height: 48px;
+  opacity: 0.55;
 }
 
 h1 {
@@ -62,6 +72,7 @@ a:hover {
 }
 
 .wrapper {
+  position: relative;
   max-width: 920px;
   margin: 0 auto;
   padding-left: 20px;
@@ -325,4 +336,93 @@ a:hover {
 .chat-title {
   font-weight: bold;
   color: #ff8370;
+}
+
+/* tech tags / chips */
+.tech-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  margin: 0 0 1em 0;
+  padding: 0;
+  list-style: none;
+}
+
+.tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background-color: #f0f0f0;
+  font-size: 13px;
+  font-weight: 400;
+  font-style: normal;
+  color: #3d3b47;
+  white-space: nowrap;
+  line-height: 1.4;
+}
+
+.tag__dot {
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  background-color: #999;
+}
+
+.tag--rails .tag__dot      { background-color: #cc0000; }
+.tag--elixir .tag__dot     { background-color: #6e4fa0; }
+.tag--phoenix .tag__dot    { background-color: #6e4fa0; }
+.tag--erlang .tag__dot     { background-color: #a9003f; }
+.tag--postgres .tag__dot   { background-color: #336791; }
+.tag--redis .tag__dot      { background-color: #d82c20; }
+.tag--kafka .tag__dot      { background-color: #2b2b2b; }
+.tag--rest .tag__dot       { background-color: #3fa9f6; }
+.tag--grpc .tag__dot       { background-color: #244c5a; }
+.tag--oauth .tag__dot      { background-color: #f4a21b; }
+.tag--jwt .tag__dot        { background-color: #d63aff; }
+.tag--ddd .tag__dot        { background-color: #3d7a8a; }
+.tag--eda .tag__dot        { background-color: #e8a838; }
+.tag--microservices .tag__dot { background-color: #5a7fa3; }
+.tag--design .tag__dot     { background-color: #f05a25; }
+.tag--lean .tag__dot       { background-color: #3dab6a; }
+
+/* status tags */
+.status-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 6px 14px;
+  border-radius: 9999px;
+  background-color: #e6e6e6;
+  font-size: 14px;
+  font-weight: 400;
+  color: #3d3b47;
+  line-height: 1.4;
+  white-space: nowrap;
+}
+
+.status-tag__dot {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.status-tag--available .status-tag__dot {
+  background-color: #3fa9f6;
+}
+
+.status-tag--not-available .status-tag__dot {
+  background-color: #f05a25;
+}
+
+.status-tag--fixed {
+  position: absolute;
+  top: 20px;
+  right: 0;
+  z-index: 9999;
 }
