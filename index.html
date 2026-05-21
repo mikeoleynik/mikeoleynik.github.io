@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,91 +8,123 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="robots" content="all,follow">
     <link rel="shortcut icon" type="image/png" href="img/favicon.png">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css?family=Work+Sans:100,200,300,400,700,800,900" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
     <div class="wrapper">
       <span class="status-tag status-tag--not-available status-tag--fixed">
         <span class="status-tag__dot"></span>
         Not available for work
       </span>
-      <header>
+
+      <header class="hero">
         <h1>Mike Oleynik</h1>
         <h2>Backend Engineer · RnD-enthusiast</h2>
       </header>
-      <main>
-        <section>
+
+      <nav class="site-nav" aria-label="Primary">
+        <div class="site-nav__inner">
+          <ul class="site-nav__links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#expertise">Expertise</a></li>
+            <li><a href="#looking-for">Looking for</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact" class="site-nav__cta">Contact</a></li>
+          </ul>
+        </div>
+      </nav>
+
+      <main id="main">
+        <section id="about" class="section">
           <h3>What I do</h3>
-          <p>I build backend using Ruby/Elixir, combining technical expertise with design thinking principles — from prototype to production.</p>
-          <ul class="list">
-            <li>As a designer (at heart), I find ideas for solving problems.</li>
-            <li>As a programmer, I implement ideas and concepts.</li>
-            <li>As a man, I feel a great sense of satisfaction when it works.</li>
-          </ul>
+          <div class="section__body">
+            <p>I build backend using Ruby/Elixir, combining technical expertise with design thinking principles — from prototype to production.</p>
+            <ul class="list">
+              <li>As a designer (at heart), I find ideas for solving problems.</li>
+              <li>As a programmer, I implement ideas and concepts.</li>
+              <li>As a man, I feel a great sense of satisfaction when it works.</li>
+            </ul>
+          </div>
         </section>
 
-        <section>
-          <h3>How I can help you</span></h3>
+        <section id="expertise" class="section">
+          <h3>How I can help you</h3>
 
-          <span class="sub">💻 Backend Software Development</span>
-          <p>I build reliable and scalable backend systems, ensuring high performance and fault tolerance — with a focus on clean code and optimal architecture.</p>
-          <ul class="tech-tags">
-            <li class="tag tag--rails"><span class="tag__dot"></span>Ruby on Rails</li>
-            <li class="tag tag--elixir"><span class="tag__dot"></span>Elixir/Phoenix</li>
-            <li class="tag tag--erlang"><span class="tag__dot"></span>Erlang/OTP</li>
-            <li class="tag tag--postgres"><span class="tag__dot"></span>PostgreSQL</li>
-            <li class="tag tag--redis"><span class="tag__dot"></span>Redis</li>
-            <li class="tag tag--kafka"><span class="tag__dot"></span>Kafka</li>
-          </ul>
+          <div class="service-block">
+            <span class="sub">💻 Backend Software Development</span>
+            <p>I build reliable and scalable backend systems, ensuring high performance and fault tolerance — with a focus on clean code and optimal architecture.</p>
+            <ul class="tech-tags">
+              <li class="tag tag--rails"><span class="tag__dot"></span>Ruby on Rails</li>
+              <li class="tag tag--elixir"><span class="tag__dot"></span>Elixir/Phoenix</li>
+              <li class="tag tag--erlang"><span class="tag__dot"></span>Erlang/OTP</li>
+              <li class="tag tag--postgres"><span class="tag__dot"></span>PostgreSQL</li>
+              <li class="tag tag--redis"><span class="tag__dot"></span>Redis</li>
+              <li class="tag tag--kafka"><span class="tag__dot"></span>Kafka</li>
+            </ul>
+          </div>
 
-          <span class="sub">🔌 API Development</span>
-          <p>I design and implement RESTful APIs and gRPC services that enable seamless integration and high throughput. Special attention is given to developer experience for frontend teams and external partners.</p>
-          <ul class="tech-tags">
-            <li class="tag tag--rest"><span class="tag__dot"></span>REST API</li>
-            <li class="tag tag--grpc"><span class="tag__dot"></span>gRPC</li>
-            <li class="tag tag--oauth"><span class="tag__dot"></span>OAuth2</li>
-            <li class="tag tag--jwt"><span class="tag__dot"></span>JWT</li>
-          </ul>
+          <div class="service-block">
+            <span class="sub">🔌 API Development</span>
+            <p>I design and implement RESTful APIs and gRPC services that enable seamless integration and high throughput. Special attention is given to developer experience for frontend teams and external partners.</p>
+            <ul class="tech-tags">
+              <li class="tag tag--rest"><span class="tag__dot"></span>REST API</li>
+              <li class="tag tag--grpc"><span class="tag__dot"></span>gRPC</li>
+              <li class="tag tag--oauth"><span class="tag__dot"></span>OAuth2</li>
+              <li class="tag tag--jwt"><span class="tag__dot"></span>JWT</li>
+            </ul>
+          </div>
 
-          <span class="sub">🧠 Solutions Architecture</span>
-          <p>I architect complex systems with a deep understanding of business requirements, technical constraints, and future scalability.</p>
-          <ul class="tech-tags">
-            <li class="tag tag--ddd"><span class="tag__dot"></span>Domain-Driven Design</li>
-            <li class="tag tag--eda"><span class="tag__dot"></span>Event-Driven Architecture</li>
-            <li class="tag tag--microservices"><span class="tag__dot"></span>Microservices</li>
-          </ul>
+          <div class="service-block">
+            <span class="sub">🧠 Solutions Architecture</span>
+            <p>I architect complex systems with a deep understanding of business requirements, technical constraints, and future scalability.</p>
+            <ul class="tech-tags">
+              <li class="tag tag--ddd"><span class="tag__dot"></span>Domain-Driven Design</li>
+              <li class="tag tag--eda"><span class="tag__dot"></span>Event-Driven Architecture</li>
+              <li class="tag tag--microservices"><span class="tag__dot"></span>Microservices</li>
+            </ul>
+          </div>
 
-          <span class="sub">🚀 MVP Development</span>
-          <p>I rapidly build Minimum Viable Products (MVPs) to validate ideas and bring them to market fast.</p>
-          <ul class="tech-tags">
-            <li class="tag tag--design"><span class="tag__dot"></span>Design Thinking</li>
-            <li class="tag tag--lean"><span class="tag__dot"></span>Lean</li>
-          </ul>
+          <div class="service-block">
+            <span class="sub">🚀 MVP Development</span>
+            <p>I rapidly build Minimum Viable Products (MVPs) to validate ideas and bring them to market fast.</p>
+            <ul class="tech-tags">
+              <li class="tag tag--design"><span class="tag__dot"></span>Design Thinking</li>
+              <li class="tag tag--lean"><span class="tag__dot"></span>Lean</li>
+            </ul>
+          </div>
         </section>
 
-        <section >
+        <section id="looking-for" class="section">
           <h3>What I'm looking for</h3>
 
-          <div class="inactive">
+          <div class="service-block inactive">
             <span class="sub">💼 Full-Time Development</span>
             <p>I'm open to full-time roles focused on backend systems and API development. I approach tasks with depth and consistency, aiming not just to write code - but to understand how it drives the product and the business forward.</p>
           </div>
 
-          <span class="sub">🧭 Part-Time Consulting</span>
-          <p>I collaborate with startups and companies undergoing digital transformation. I can strengthen an existing team or help launch a new product from scratch.</p>
+          <div class="service-block">
+            <span class="sub">🧭 Part-Time Consulting</span>
+            <p>I collaborate with startups and companies undergoing digital transformation. I can strengthen an existing team or help launch a new product from scratch.</p>
+          </div>
 
-          <span class="sub">🔧 In Any Format</span>
-          <p>I dive into the specifics of your domain, actively propose product hypotheses, and quickly deliver prototypes to validate ideas. Even in part-time engagements, I focus on building long-term, value-driven partnerships.</p>
+          <div class="service-block">
+            <span class="sub">🔧 In Any Format</span>
+            <p>I dive into the specifics of your domain, actively propose product hypotheses, and quickly deliver prototypes to validate ideas. Even in part-time engagements, I focus on building long-term, value-driven partnerships.</p>
+          </div>
 
-          <p>If you or your company are interested in working with me, feel free to send me a <a href="https://t.me/mikeoleynik" target="_blank">telegram</a> or <a href="mailto:oleynik.mike@yandex.ru">email</a>.</p>
+          <p class="section__note">If you or your company are interested in working with me, feel free to send me a <a href="https://t.me/mikeoleynik" target="_blank">telegram</a> or <a href="mailto:oleynik.mike@yandex.ru">email</a>.</p>
         </section>
 
-        <section>
+        <section id="skills" class="section">
           <h3>Soft skills</h3>
-          <ul class="list">
+          <ul class="list list--skills">
             <li>
               <b>Creative thinking under pressure</b>
               <p>I come up with innovative solutions even under tight deadlines.</p>
@@ -115,7 +147,7 @@
           </ul>
         </section>
 
-        <section>
+        <section id="projects" class="section">
           <h3>Product Experiments &amp; Open Source</h3>
           <p>Product experiments and open-source initiatives around developer tooling, workflow automation, structured thinking, and engineering productivity.</p>
 
@@ -156,8 +188,8 @@
           </ul>
         </section>
 
-        <section>
-          <h3>yagni, maybe</span></h3>
+        <section id="yagni" class="section">
+          <h3>yagni, maybe</h3>
           <p>You can consider this my blog. Here I structure my thoughts in the form of essays or notes.</p>
           <ul class="rool rool--open-source">
             <li>
@@ -172,8 +204,9 @@
           </ul>
         </section>
       </main>
-      <footer>
-        <section>
+
+      <footer id="contact">
+        <section class="section section--contact">
           <h3>📬 Get in Touch</h3>
 
           <p>Let’s talk about your project — even if it’s just an idea for now.</p>
