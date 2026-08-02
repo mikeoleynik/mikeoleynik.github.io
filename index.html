@@ -1,65 +1,73 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Mike Oleynik | Backend Engineer · RnD-enthusiast.</title>
+    <title>Михаил Олейник | Бэкенд-инженер · R&D-энтузиаст.</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="robots" content="all,follow">
     <link rel="shortcut icon" type="image/png" href="img/favicon.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
-    <a class="skip-link" href="#main">Skip to content</a>
+    <a class="skip-link" href="#main">Перейти к содержанию</a>
 
     <div class="wrapper">
-      <span class="status-tag status-tag--not-available status-tag--fixed">
-        <span class="status-tag__dot"></span>
-        Not available for work
-      </span>
+      <div class="top-bar">
+        <nav class="lang-switcher" aria-label="Язык">
+          <a href="index.html" class="lang-switcher__link lang-switcher__link--active" aria-current="page">RU</a>
+          <span class="lang-switcher__sep" aria-hidden="true">|</span>
+          <a href="en.html" class="lang-switcher__link">EN</a>
+        </nav>
+
+        <span class="status-tag status-tag--not-available">
+          <span class="status-tag__dot"></span>
+          Только частичная занятость.
+        </span>
+      </div>
 
       <header class="hero">
-        <h1>Mike Oleynik</h1>
-        <h2>Backend Engineer · RnD-enthusiast</h2>
+        <h2>Михаил Олейник</h2>
+        <h1>Бэкенд-инженер · R&D-энтузиаст</h1>
       </header>
 
-      <nav class="site-nav" aria-label="Primary">
+      <nav class="site-nav" aria-label="Основная навигация">
         <div class="site-nav__inner">
           <ul class="site-nav__links">
-            <li><a href="#about">About</a></li>
-            <li><a href="#expertise">Expertise</a></li>
-            <li><a href="#looking-for">Looking for</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact" class="site-nav__cta">Contact</a></li>
+            <li><a href="#about">О себе</a></li>
+            <li><a href="#expertise">Экспертиза</a></li>
+            <li><a href="#looking-for">Что ищу</a></li>
+            <li><a href="#skills">Навыки</a></li>
+            <li><a href="#projects">Проекты</a></li>
+            <li><a href="#contact" class="site-nav__cta">Контакты</a></li>
           </ul>
         </div>
       </nav>
 
       <main id="main">
         <section id="about" class="section">
-          <h3>What I do</h3>
+          <h3>Что я делаю</h3>
           <div class="section__body">
-            <p>I build backend using Ruby/Elixir, combining technical expertise with design thinking principles — from prototype to production.</p>
+            <p>Я создаю бэкенд на Ruby/Elixir, сочетая техническую экспертизу с принципами дизайн-мышления — от прототипа до продакшена.</p>
             <ul class="list">
-              <li>As a designer (at heart), I find ideas for solving problems.</li>
-              <li>As a programmer, I implement ideas and concepts.</li>
-              <li>As a man, I feel a great sense of satisfaction when it works.</li>
+              <li>Как дизайнер (в душе), я нахожу идеи для решения проблем.</li>
+              <li>Как программист, я реализую идеи и концепции.</li>
+              <li>Как человек, я испытываю огромное удовлетворение, когда всё работает.</li>
             </ul>
           </div>
         </section>
 
         <section id="expertise" class="section">
-          <h3>How I can help you</h3>
+          <h3>Как я могу помочь вам</h3>
 
           <div class="service-block">
-            <span class="sub">💻 Backend Software Development</span>
-            <p>I build reliable and scalable backend systems, ensuring high performance and fault tolerance — with a focus on clean code and optimal architecture.</p>
+            <span class="sub">💻 Backend-разработка</span>
+            <p>Я создаю надёжные и масштабируемые бэкенд-системы, обеспечивая высокую производительность и отказоустойчивость — с акцентом на чистый код и оптимальную архитектуру.</p>
             <ul class="tech-tags">
               <li class="tag tag--rails"><span class="tag__dot"></span>Ruby on Rails</li>
               <li class="tag tag--elixir"><span class="tag__dot"></span>Elixir/Phoenix</li>
@@ -71,8 +79,8 @@
           </div>
 
           <div class="service-block">
-            <span class="sub">🔌 API Development</span>
-            <p>I design and implement RESTful APIs and gRPC services that enable seamless integration and high throughput. Special attention is given to developer experience for frontend teams and external partners.</p>
+            <span class="sub">🔌 Разработка API</span>
+            <p>Я проектирую и реализую RESTful API и gRPC-сервисы, которые обеспечивают бесшовную интеграцию и высокую пропускную способность. Особое внимание уделяется удобству разработчиков для фронтенд-команд и внешних партнёров.</p>
             <ul class="tech-tags">
               <li class="tag tag--rest"><span class="tag__dot"></span>REST API</li>
               <li class="tag tag--grpc"><span class="tag__dot"></span>gRPC</li>
@@ -82,8 +90,8 @@
           </div>
 
           <div class="service-block">
-            <span class="sub">🧠 Solutions Architecture</span>
-            <p>I architect complex systems with a deep understanding of business requirements, technical constraints, and future scalability.</p>
+            <span class="sub">🧠 Архитектура решений</span>
+            <p>Я проектирую сложные системы с глубоким пониманием бизнес-требований, технических ограничений и будущей масштабируемости.</p>
             <ul class="tech-tags">
               <li class="tag tag--ddd"><span class="tag__dot"></span>Domain-Driven Design</li>
               <li class="tag tag--eda"><span class="tag__dot"></span>Event-Driven Architecture</li>
@@ -92,8 +100,8 @@
           </div>
 
           <div class="service-block">
-            <span class="sub">🚀 MVP Development</span>
-            <p>I rapidly build Minimum Viable Products (MVPs) to validate ideas and bring them to market fast.</p>
+            <span class="sub">🚀 Разработка MVP</span>
+            <p>Я быстро создаю минимально жизнеспособные продукты (MVP), чтобы проверить идеи и быстро вывести их на рынок.</p>
             <ul class="tech-tags">
               <li class="tag tag--design"><span class="tag__dot"></span>Design Thinking</li>
               <li class="tag tag--lean"><span class="tag__dot"></span>Lean</li>
@@ -102,104 +110,54 @@
         </section>
 
         <section id="looking-for" class="section">
-          <h3>What I'm looking for</h3>
+          <h3>Что я ищу</h3>
 
           <div class="service-block inactive">
-            <span class="sub">💼 Full-Time Development</span>
-            <p>I'm open to full-time roles focused on backend systems and API development. I approach tasks with depth and consistency, aiming not just to write code - but to understand how it drives the product and the business forward.</p>
+            <span class="sub">💼 Полная занятость</span>
+            <p>Я открыт к работе на полную ставку, сосредоточенной на бэкенд-системах и разработке API. Я подхожу к задачам с глубиной и последовательностью, стремясь не просто писать код, а понимать, как он продвигает продукт и бизнес вперёд.</p>
           </div>
 
           <div class="service-block">
-            <span class="sub">🧭 Part-Time Consulting</span>
-            <p>I collaborate with startups and companies undergoing digital transformation. I can strengthen an existing team or help launch a new product from scratch.</p>
+            <span class="sub">🧭 Частичная занятость</span>
+            <p>Я сотрудничаю со стартапами и компаниями, проходящими цифровую трансформацию. Могу усилить существующую команду или помочь запустить новый продукт с нуля.</p>
           </div>
 
           <div class="service-block">
-            <span class="sub">🔧 In Any Format</span>
-            <p>I dive into the specifics of your domain, actively propose product hypotheses, and quickly deliver prototypes to validate ideas. Even in part-time engagements, I focus on building long-term, value-driven partnerships.</p>
+            <span class="sub">🔧 В любом формате</span>
+            <p>Я погружаюсь в специфику вашей области, активно предлагаю продуктовые гипотезы и быстро предоставляю прототипы для проверки идей. Даже в частичной занятости я сосредотачиваюсь на построении долгосрочных, ориентированных на ценность партнёрств.</p>
           </div>
 
-          <p class="section__note">If you or your company are interested in working with me, feel free to send me a <a href="https://t.me/mikeoleynik" target="_blank">telegram</a> or <a href="mailto:oleynik.mike@yandex.ru">email</a>.</p>
-        </section>
-
-        <section id="skills" class="section">
-          <h3>Soft skills</h3>
-          <ul class="list list--skills">
-            <li>
-              <b>Creative thinking under pressure</b>
-              <p>I come up with innovative solutions even under tight deadlines.</p>
-            </li>
-
-            <li>
-              <b>Cross-cultural competence</b>
-              <p>I excel at working with diverse perspectives and collaborating effectively in international teams.</p>
-            </li>
-
-            <li>
-              <b>Life-long learning</b>
-              <p>I continuously enhance my skills and explore new technologies, applying interdisciplinary approaches to solving problems.</p>
-            </li>
-
-            <li>
-              <b>LLM Systems Engineering</b>
-              <p>Spec-driven development (SDD/OpenSpec), agentic workflows, Tool orchestration, Human-in-the-loop</p>
-            </li>
-          </ul>
+          <p class="section__note">Если вы или ваша компания заинтересованы в сотрудничестве, напишите мне в <a href="https://t.me/mikeoleynik" target="_blank">Telegram</a> или на <a href="mailto:oleynik.mike@yandex.ru">email</a>.</p>
         </section>
 
         <section id="projects" class="section">
-          <h3>Product Experiments &amp; Open Source</h3>
-          <p>Product experiments and open-source initiatives around developer tooling, workflow automation, structured thinking, and engineering productivity.</p>
-
-          <span class="sub">Internal Accelerator Concepts</span>
+          <h3>Open Source</h3>
+          <p>Экспериментирую с продуктами и open-source проектами на стыке developer tooling, автоматизации, инженерного мышления и повышения эффективности разработки.</p>
           <ul class="rool rool--open-source">
             <li>
-              <a href="yagni/edctn.html" target="_blank">edctn.</a>
-              <p>EdTech · Accelerator, 2019 — concepts for improving online education. <i>"A teacher should be a rockstar."</i></p>
-            </li>
-
-            <li>
-              <a href="yagni/spoapo.html" target="_blank">spoapo.</a>
-              <p>EdTech/VoiceTech · Accelerator, 2020 — voice assistant for students. <i>"A student should be a rockstar."</i></p>
-            </li>
-
-            <li>
-              <a href="yagni/weighbull.html" target="_blank">weighbull</a>
-              <p>Fun/Smart Devices · Accelerator, 2021 — a smart bracelet for farm animals on any planets (😂).</p>
-            </li>
-
-            <li>
-              <a href="yagni/sestra.html" target="_blank">sestra.ai</a>
-              <p>MedTech · Accelerator, 2022 — voice assistant for doctors.</p>
-            </li>
-          </ul>
-
-          <span class="sub">Open Source</span>
-          <ul class="rool rool--open-source">
-            <li>
-              <a href="https://github.com/mikeoleynik" target="_blank">Ask Serega</a>
-              <p>Open Source · DevTools — curated thinking frameworks for engineers. In production; used by developers and managers.</p>
-            </li>
-
-            <li>
-              <a href="https://github.com/mikeoleynik" target="_blank">Dopustim</a>
-              <p>Open Source · Productivity — structured thinking tools for technical teams. In production; used by developers and managers.</p>
+              <a href="https://askserega.ru/" target="_blank">Ask Serega</a>
+              <p>DevTools, Architecture — подборка фреймворков и cli инструмент для создания знаний о системе. В продакшене; используется разработчиками и аналитиками.</p>
             </li>
           </ul>
         </section>
 
         <section id="yagni" class="section">
-          <h3>yagni, maybe</h3>
-          <p>You can consider this my blog. Here I structure my thoughts in the form of essays or notes.</p>
+          <h3>spoapo.</h3>
+          <p>Можно считать это моим блогом. Здесь я структурирую мысли в виде эссе или заметок.</p>
           <ul class="rool rool--open-source">
             <li>
-              <a href="https://medium.com/@spoapo/harden-of-idea-04554b52c0fc" target="_blank">Harden of Idea</a>
-              <p>My framework for creating ideas.</p>
+              <a href="https://telegra.ph/Kristallizaciya-idei-07-11" target="_blank">Кристаллизация идеи</a>
+              <p>Практический фреймворк по работе с идеями, основанный на системном подходе.</p>
             </li>
 
             <li>
-              <a href="https://medium.com/@mikeoleynik/how-to-manage-an-overflow-of-ideas-dcc5a2b6072a" target="_blank">A Guide to Productivity.</a>
-              <p>How to Manage an Overflow of Ideas.</p>
+              <a href="https://telegra.ph/Kak-spravitsya-s-potokom-idej-07-11" target="_blank">Гид по продуктивности.</a>
+              <p>Для тех, у кого слишком много идей. Если творческий хаос мешает фокусироваться — научитесь его укрощать: 4 шага, чтобы генерировать идеи без перегрузки.</p>
+            </li>
+
+            <li>
+              <a href="https://telegra.ph/Kognitivnye-iskazheniya-pri-generacii-idej-07-12" target="_blank">Когнитивные искажения при генерации идей.</a>
+              <p>Личная рефлексия о том, как когнитивные искажения влияют на генерацию идей. Текст будет полезен всем, кто работает с идеями и хочет сохранить ясность мышления.</p>
             </li>
           </ul>
         </section>
@@ -207,14 +165,14 @@
 
       <footer id="contact">
         <section class="section section--contact">
-          <h3>📬 Get in Touch</h3>
+          <h3>📬 Связаться со мной</h3>
 
-          <p>Let’s talk about your project — even if it’s just an idea for now.</p>
-          <p>Feel free to reach out anytime. Sometimes the best ideas are born through collaboration.</p>
+          <p>Давайте поговорим о вашем проекте — даже если пока это только идея.</p>
+          <p>Не стесняйтесь писать в любое время. Иногда лучшие идеи рождаются в процессе совместной работы.</p>
 
           <div class="contact-columns">
             <div class="column">
-              <span class="sub">Profiles</span>
+              <span class="sub">Профили</span>
               <ul class="rool">
                 <li>
                   <i class="fab fa-github"></i>
@@ -227,20 +185,16 @@
               </ul>
             </div>
             <div class="column">
-              <span class="sub">Download</span>
+              <span class="sub">Скачать</span>
               <ul class="rool">
                 <li>
                   <i class="fas fa-file-alt"></i>
-                  <a href="https://drive.google.com/file/d/1u5QvTjrEXNswhOLKGVE7uAmh62PnFZH5/view" target="_blank"> CV</a>
-                </li>
-                <li>
-                  <i class="fas fa-file-signature"></i>
-                  <a href="https://drive.google.com/file/d/1u5QvTjrEXNswhOLKGVE7uAmh62PnFZH5/view" target="_blank"> Artist Statement</a>
+                  <a href="https://drive.google.com/file/d/19Z2f8yiM0pwO1DDpV_j2UkRwciWWoUU4/view?usp=sharing" target="_blank"> CV</a>
                 </li>
               </ul>
             </div>
             <div class="column">
-              <span class="sub">Contacts</span>
+              <span class="sub">Контакты</span>
               <ul class="rool">
                 <li>
                   <i class="fas fa-envelope"></i>
@@ -258,7 +212,7 @@
       </footer>
 
       <div class="signature">
-        <img src="img/oleynik-signature.svg" alt="Mike Oleynik signature">
+        <img src="img/oleynik-signature.svg" alt="Подпись Михаила Олейника">
       </div>
 
     </div>
