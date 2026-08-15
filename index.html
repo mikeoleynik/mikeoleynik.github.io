@@ -10,49 +10,49 @@
     <link rel="shortcut icon" type="image/png" href="img/favicon.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Spectral:wght@500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
   </head>
-  <body>
+  <body class="home">
     <a class="skip-link" href="#main">Перейти к содержанию</a>
 
-    <div class="wrapper">
-      <div class="top-bar">
-        <nav class="lang-switcher" aria-label="Язык">
-          <a href="index.html" class="lang-switcher__link lang-switcher__link--active" aria-current="page">RU</a>
-          <span class="lang-switcher__sep" aria-hidden="true">|</span>
-          <a href="en.html" class="lang-switcher__link">EN</a>
-        </nav>
+    <header class="site-header">
+      <a class="site-header__mark" href="#top">Михаил Олейник</a>
 
-        <span class="status-tag status-tag--not-available">
-          <span class="status-tag__dot"></span>
-          Только частичная занятость.
-        </span>
-      </div>
-
-      <header class="hero">
-        <h2>Михаил Олейник</h2>
-        <h1>Бэкенд-инженер · R&D-энтузиаст</h1>
-      </header>
-
-      <nav class="site-nav" aria-label="Основная навигация">
-        <div class="site-nav__inner">
-          <ul class="site-nav__links">
-            <li><a href="#about">О себе</a></li>
-            <li><a href="#expertise">Экспертиза</a></li>
-            <li><a href="#looking-for">Что ищу</a></li>
-            <!-- <li><a href="#skills">Навыки</a></li> -->
-            <li><a href="#projects">Проекты</a></li>
-            <li><a href="#contact" class="site-nav__cta">Контакты</a></li>
-          </ul>
-        </div>
+      <nav class="site-header__nav" aria-label="Основная навигация">
+        <ul>
+          <li><a href="#about">о себе</a></li>
+          <li><a href="#expertise">экспертиза</a></li>
+          <li><a href="#looking-for">что ищу</a></li>
+          <li><a href="#projects">проекты</a></li>
+          <li><a href="#contact">контакты</a></li>
+        </ul>
       </nav>
 
+      <nav class="lang-switcher" aria-label="Язык">
+        <a href="index.html" class="lang-switcher__link lang-switcher__link--active" aria-current="page">RU</a>
+        <span class="lang-switcher__sep" aria-hidden="true">/</span>
+        <a href="en.html" class="lang-switcher__link">EN</a>
+      </nav>
+    </header>
+
+    <div class="wrapper" id="top">
+      <header class="hero">
+        <p class="hero__kicker">Бэкенд-инженер · R&D-энтузиаст</p>
+        <h1 class="hero__name">Михаил Олейник</h1>
+        <p class="hero__status">
+          <span class="hero__status-dot" aria-hidden="true"></span>
+          Только частичная занятость
+        </p>
+      </header>
+
       <main id="main">
-        <section id="about" class="section">
-          <h3>Что я делаю</h3>
-          <div class="section__body">
+        <section id="about" class="section" data-reveal>
+          <header class="section__header">
+            <span class="section__index" aria-hidden="true">01</span>
+            <h2 class="section__title">Что я делаю</h2>
+          </header>
+          <div class="section__content">
             <p>Я создаю бэкенд на Ruby/Elixir, сочетая техническую экспертизу с принципами дизайн-мышления — от прототипа до продакшена.</p>
             <ul class="list">
               <li>Как дизайнер (в душе), я нахожу идеи для решения проблем.</li>
@@ -62,152 +62,180 @@
           </div>
         </section>
 
-        <section id="expertise" class="section">
-          <h3>Как я могу помочь вам</h3>
+        <section id="expertise" class="section" data-reveal>
+          <header class="section__header">
+            <span class="section__index" aria-hidden="true">02</span>
+            <h2 class="section__title">Как я могу помочь вам</h2>
+          </header>
+          <div class="section__content">
+            <article class="entry">
+              <h3 class="entry__title">Backend-разработка</h3>
+              <p>Я создаю надёжные и масштабируемые бэкенд-системы, обеспечивая высокую производительность и отказоустойчивость — с акцентом на чистый код и оптимальную архитектуру.</p>
+              <ul class="tech-tags">
+                <li class="tag tag--rails"><span class="tag__dot"></span>Ruby on Rails</li>
+                <li class="tag tag--elixir"><span class="tag__dot"></span>Elixir/Phoenix</li>
+                <li class="tag tag--erlang"><span class="tag__dot"></span>Erlang/OTP</li>
+                <li class="tag tag--postgres"><span class="tag__dot"></span>PostgreSQL</li>
+                <li class="tag tag--redis"><span class="tag__dot"></span>Redis</li>
+                <li class="tag tag--kafka"><span class="tag__dot"></span>Kafka</li>
+              </ul>
+            </article>
 
-          <div class="service-block">
-            <span class="sub">💻 Backend-разработка</span>
-            <p>Я создаю надёжные и масштабируемые бэкенд-системы, обеспечивая высокую производительность и отказоустойчивость — с акцентом на чистый код и оптимальную архитектуру.</p>
-            <ul class="tech-tags">
-              <li class="tag tag--rails"><span class="tag__dot"></span>Ruby on Rails</li>
-              <li class="tag tag--elixir"><span class="tag__dot"></span>Elixir/Phoenix</li>
-              <li class="tag tag--erlang"><span class="tag__dot"></span>Erlang/OTP</li>
-              <li class="tag tag--postgres"><span class="tag__dot"></span>PostgreSQL</li>
-              <li class="tag tag--redis"><span class="tag__dot"></span>Redis</li>
-              <li class="tag tag--kafka"><span class="tag__dot"></span>Kafka</li>
-            </ul>
+            <article class="entry">
+              <h3 class="entry__title">Разработка API</h3>
+              <p>Я проектирую и реализую RESTful API и gRPC-сервисы, которые обеспечивают бесшовную интеграцию и высокую пропускную способность. Особое внимание уделяется удобству разработчиков для фронтенд-команд и внешних партнёров.</p>
+              <ul class="tech-tags">
+                <li class="tag tag--rest"><span class="tag__dot"></span>REST API</li>
+                <li class="tag tag--grpc"><span class="tag__dot"></span>gRPC</li>
+                <li class="tag tag--oauth"><span class="tag__dot"></span>OAuth2</li>
+                <li class="tag tag--jwt"><span class="tag__dot"></span>JWT</li>
+              </ul>
+            </article>
+
+            <article class="entry">
+              <h3 class="entry__title">Архитектура решений</h3>
+              <p>Я проектирую сложные системы с глубоким пониманием бизнес-требований, технических ограничений и будущей масштабируемости.</p>
+              <ul class="tech-tags">
+                <li class="tag tag--ddd"><span class="tag__dot"></span>Domain-Driven Design</li>
+                <li class="tag tag--eda"><span class="tag__dot"></span>Event-Driven Architecture</li>
+                <li class="tag tag--microservices"><span class="tag__dot"></span>Microservices</li>
+              </ul>
+            </article>
+
+            <article class="entry">
+              <h3 class="entry__title">Разработка MVP</h3>
+              <p>Я быстро создаю минимально жизнеспособные продукты (MVP), чтобы проверить идеи и быстро вывести их на рынок.</p>
+              <ul class="tech-tags">
+                <li class="tag tag--design"><span class="tag__dot"></span>Design Thinking</li>
+                <li class="tag tag--lean"><span class="tag__dot"></span>Lean</li>
+              </ul>
+            </article>
           </div>
+        </section>
 
-          <div class="service-block">
-            <span class="sub">🔌 Разработка API</span>
-            <p>Я проектирую и реализую RESTful API и gRPC-сервисы, которые обеспечивают бесшовную интеграцию и высокую пропускную способность. Особое внимание уделяется удобству разработчиков для фронтенд-команд и внешних партнёров.</p>
-            <ul class="tech-tags">
-              <li class="tag tag--rest"><span class="tag__dot"></span>REST API</li>
-              <li class="tag tag--grpc"><span class="tag__dot"></span>gRPC</li>
-              <li class="tag tag--oauth"><span class="tag__dot"></span>OAuth2</li>
-              <li class="tag tag--jwt"><span class="tag__dot"></span>JWT</li>
-            </ul>
+        <section id="looking-for" class="section" data-reveal>
+          <header class="section__header">
+            <span class="section__index" aria-hidden="true">03</span>
+            <h2 class="section__title">Что я ищу</h2>
+          </header>
+          <div class="section__content">
+            <article class="entry entry--inactive">
+              <h3 class="entry__title">Полная занятость</h3>
+              <p>Я открыт к работе на полную ставку, сосредоточенной на бэкенд-системах и разработке API. Я подхожу к задачам с глубиной и последовательностью, стремясь не просто писать код, а понимать, как он продвигает продукт и бизнес вперёд.</p>
+            </article>
+
+            <article class="entry">
+              <h3 class="entry__title">Частичная занятость</h3>
+              <p>Я сотрудничаю со стартапами и компаниями, проходящими цифровую трансформацию. Могу усилить существующую команду или помочь запустить новый продукт с нуля.</p>
+            </article>
+
+            <article class="entry">
+              <h3 class="entry__title">В любом формате</h3>
+              <p>Я погружаюсь в специфику вашей области, активно предлагаю продуктовые гипотезы и быстро предоставляю прототипы для проверки идей. Даже в частичной занятости я сосредотачиваюсь на построении долгосрочных, ориентированных на ценность партнёрств.</p>
+            </article>
+
+            <p class="section__note">Если вы или ваша компания заинтересованы в сотрудничестве, напишите мне в <a href="https://t.me/mikeoleynik" target="_blank" rel="noopener">Telegram</a> или на <a href="mailto:oleynik.mike@yandex.ru">email</a>.</p>
           </div>
+        </section>
 
-          <div class="service-block">
-            <span class="sub">🧠 Архитектура решений</span>
-            <p>Я проектирую сложные системы с глубоким пониманием бизнес-требований, технических ограничений и будущей масштабируемости.</p>
-            <ul class="tech-tags">
-              <li class="tag tag--ddd"><span class="tag__dot"></span>Domain-Driven Design</li>
-              <li class="tag tag--eda"><span class="tag__dot"></span>Event-Driven Architecture</li>
-              <li class="tag tag--microservices"><span class="tag__dot"></span>Microservices</li>
-            </ul>
-          </div>
-
-          <div class="service-block">
-            <span class="sub">🚀 Разработка MVP</span>
-            <p>Я быстро создаю минимально жизнеспособные продукты (MVP), чтобы проверить идеи и быстро вывести их на рынок.</p>
-            <ul class="tech-tags">
-              <li class="tag tag--design"><span class="tag__dot"></span>Design Thinking</li>
-              <li class="tag tag--lean"><span class="tag__dot"></span>Lean</li>
+        <section id="projects" class="section" data-reveal>
+          <header class="section__header">
+            <span class="section__index" aria-hidden="true">04</span>
+            <h2 class="section__title">Open Source</h2>
+          </header>
+          <div class="section__content">
+            <p>Экспериментирую с продуктами и open-source проектами на стыке developer tooling, автоматизации, инженерного мышления и повышения эффективности разработки.</p>
+            <ul class="project-list">
+              <li class="project">
+                <a class="project__link" href="https://askserega.ru/" target="_blank" rel="noopener">
+                  <span>Ask Serega</span>
+                  <span class="project__arrow" aria-hidden="true">↗</span>
+                </a>
+                <p class="project__desc">DevTools, Architecture — подборка фреймворков и cli инструмент для создания знаний о системе. В продакшене; используется разработчиками и аналитиками.</p>
+              </li>
             </ul>
           </div>
         </section>
 
-        <section id="looking-for" class="section">
-          <h3>Что я ищу</h3>
+        <section id="yagni" class="section" data-reveal>
+          <header class="section__header">
+            <span class="section__index" aria-hidden="true">05</span>
+            <h2 class="section__title">spoapo.</h2>
+          </header>
+          <div class="section__content">
+            <p>Можно считать это моим блогом. Здесь я структурирую мысли в виде эссе или заметок.</p>
+            <ul class="project-list">
+              <li class="project">
+                <a class="project__link" href="https://telegra.ph/Kristallizaciya-idei-07-11" target="_blank" rel="noopener">
+                  <span>Кристаллизация идеи</span>
+                  <span class="project__arrow" aria-hidden="true">↗</span>
+                </a>
+                <p class="project__desc">Практический фреймворк по работе с идеями, основанный на системном подходе.</p>
+              </li>
 
-          <div class="service-block inactive">
-            <span class="sub">💼 Полная занятость</span>
-            <p>Я открыт к работе на полную ставку, сосредоточенной на бэкенд-системах и разработке API. Я подхожу к задачам с глубиной и последовательностью, стремясь не просто писать код, а понимать, как он продвигает продукт и бизнес вперёд.</p>
+              <li class="project">
+                <a class="project__link" href="https://telegra.ph/Kak-spravitsya-s-potokom-idej-07-11" target="_blank" rel="noopener">
+                  <span>Гид по продуктивности</span>
+                  <span class="project__arrow" aria-hidden="true">↗</span>
+                </a>
+                <p class="project__desc">Для тех, у кого слишком много идей. Если творческий хаос мешает фокусироваться — научитесь его укрощать: 4 шага, чтобы генерировать идеи без перегрузки.</p>
+              </li>
+
+              <li class="project">
+                <a class="project__link" href="https://telegra.ph/Kognitivnye-iskazheniya-pri-generacii-idej-07-12" target="_blank" rel="noopener">
+                  <span>Когнитивные искажения при генерации идей</span>
+                  <span class="project__arrow" aria-hidden="true">↗</span>
+                </a>
+                <p class="project__desc">Личная рефлексия о том, как когнитивные искажения влияют на генерацию идей. Текст будет полезен всем, кто работает с идеями и хочет сохранить ясность мышления.</p>
+              </li>
+            </ul>
           </div>
-
-          <div class="service-block">
-            <span class="sub">🧭 Частичная занятость</span>
-            <p>Я сотрудничаю со стартапами и компаниями, проходящими цифровую трансформацию. Могу усилить существующую команду или помочь запустить новый продукт с нуля.</p>
-          </div>
-
-          <div class="service-block">
-            <span class="sub">🔧 В любом формате</span>
-            <p>Я погружаюсь в специфику вашей области, активно предлагаю продуктовые гипотезы и быстро предоставляю прототипы для проверки идей. Даже в частичной занятости я сосредотачиваюсь на построении долгосрочных, ориентированных на ценность партнёрств.</p>
-          </div>
-
-          <p class="section__note">Если вы или ваша компания заинтересованы в сотрудничестве, напишите мне в <a href="https://t.me/mikeoleynik" target="_blank">Telegram</a> или на <a href="mailto:oleynik.mike@yandex.ru">email</a>.</p>
-        </section>
-
-        <section id="projects" class="section">
-          <h3>Open Source</h3>
-          <p>Экспериментирую с продуктами и open-source проектами на стыке developer tooling, автоматизации, инженерного мышления и повышения эффективности разработки.</p>
-          <ul class="rool rool--open-source">
-            <li>
-              <a href="https://askserega.ru/" target="_blank">Ask Serega</a>
-              <p>DevTools, Architecture — подборка фреймворков и cli инструмент для создания знаний о системе. В продакшене; используется разработчиками и аналитиками.</p>
-            </li>
-          </ul>
-        </section>
-
-        <section id="yagni" class="section">
-          <h3>spoapo.</h3>
-          <p>Можно считать это моим блогом. Здесь я структурирую мысли в виде эссе или заметок.</p>
-          <ul class="rool rool--open-source">
-            <li>
-              <a href="https://telegra.ph/Kristallizaciya-idei-07-11" target="_blank">Кристаллизация идеи</a>
-              <p>Практический фреймворк по работе с идеями, основанный на системном подходе.</p>
-            </li>
-
-            <li>
-              <a href="https://telegra.ph/Kak-spravitsya-s-potokom-idej-07-11" target="_blank">Гид по продуктивности.</a>
-              <p>Для тех, у кого слишком много идей. Если творческий хаос мешает фокусироваться — научитесь его укрощать: 4 шага, чтобы генерировать идеи без перегрузки.</p>
-            </li>
-
-            <li>
-              <a href="https://telegra.ph/Kognitivnye-iskazheniya-pri-generacii-idej-07-12" target="_blank">Когнитивные искажения при генерации идей.</a>
-              <p>Личная рефлексия о том, как когнитивные искажения влияют на генерацию идей. Текст будет полезен всем, кто работает с идеями и хочет сохранить ясность мышления.</p>
-            </li>
-          </ul>
         </section>
       </main>
 
       <footer id="contact">
-        <section class="section section--contact">
-          <h3>📬 Связаться со мной</h3>
+        <section class="section" data-reveal>
+          <header class="section__header">
+            <span class="section__index" aria-hidden="true">06</span>
+            <h2 class="section__title">Связаться со мной</h2>
+          </header>
+          <div class="section__content">
+            <p class="footer__lede">Давайте поговорим о вашем проекте — даже если пока это только идея.</p>
+            <p>Не стесняйтесь писать в любое время. Иногда лучшие идеи рождаются в процессе совместной работы.</p>
 
-          <p>Давайте поговорим о вашем проекте — даже если пока это только идея.</p>
-          <p>Не стесняйтесь писать в любое время. Иногда лучшие идеи рождаются в процессе совместной работы.</p>
-
-          <div class="contact-columns">
-            <div class="column">
-              <span class="sub">Профили</span>
-              <ul class="rool">
-                <li>
-                  <i class="fab fa-github"></i>
-                  <a href="https://github.com/mikeoleynik" target="_blank"> Github</a>
-                </li>
-                <li>
-                  <i class="fab fa-linkedin"></i>
-                  <a href="https://www.linkedin.com/in/mikeoleynik" target="_blank"> LinkedIn</a>
-                </li>
-              </ul>
-            </div>
-            <div class="column">
-              <span class="sub">Скачать</span>
-              <ul class="rool">
-                <li>
-                  <i class="fas fa-file-alt"></i>
-                  <a href="https://drive.google.com/file/d/19Z2f8yiM0pwO1DDpV_j2UkRwciWWoUU4/view?usp=sharing" target="_blank"> CV</a>
-                </li>
-              </ul>
-            </div>
-            <div class="column">
-              <span class="sub">Контакты</span>
-              <ul class="rool">
-                <li>
-                  <i class="fas fa-envelope"></i>
-                  <a href="mailto:oleynik.mike@yandex.ru"> oleynik.mike@yandex.ru</a>
-                </li>
-                <li class="poster">
-                  <i class="fab fa-telegram"></i>
-                  <a href="https://t.me/mikeoleynik" target="_blank"> @mikeoleynik</a>
-                </li>
-              </ul>
+            <div class="contact-columns">
+              <div class="column">
+                <span class="contact-label">Профили</span>
+                <ul class="contact-list">
+                  <li>
+                    <a href="https://github.com/mikeoleynik" target="_blank" rel="noopener">GitHub <span class="project__arrow" aria-hidden="true">↗</span></a>
+                  </li>
+                  <li>
+                    <a href="https://www.linkedin.com/in/mikeoleynik" target="_blank" rel="noopener">LinkedIn <span class="project__arrow" aria-hidden="true">↗</span></a>
+                  </li>
+                </ul>
+              </div>
+              <div class="column">
+                <span class="contact-label">Скачать</span>
+                <ul class="contact-list">
+                  <li>
+                    <a href="https://drive.google.com/file/d/19Z2f8yiM0pwO1DDpV_j2UkRwciWWoUU4/view?usp=sharing" target="_blank" rel="noopener">CV <span class="project__arrow" aria-hidden="true">↗</span></a>
+                  </li>
+                </ul>
+              </div>
+              <div class="column">
+                <span class="contact-label">Контакты</span>
+                <ul class="contact-list">
+                  <li>
+                    <a href="mailto:oleynik.mike@yandex.ru">oleynik.mike@yandex.ru</a>
+                  </li>
+                  <li>
+                    <a href="https://t.me/mikeoleynik" target="_blank" rel="noopener">@mikeoleynik <span class="project__arrow" aria-hidden="true">↗</span></a>
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
-
         </section>
       </footer>
 
@@ -216,5 +244,7 @@
       </div>
 
     </div>
+
+    <script src="js/main.js" defer></script>
   </body>
 </html>
