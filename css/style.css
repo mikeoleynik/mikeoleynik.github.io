@@ -90,8 +90,8 @@ body {
 }
 
 ::selection {
-  background: var(--color-ink);
-  color: var(--color-paper);
+  background: var(--color-accent-blue);
+  color: var(--color-ink);
 }
 
 :focus-visible {
@@ -462,11 +462,12 @@ main {
 }
 
 .entry--inactive {
-  color: var(--color-ink-mute);
+  color: color-mix(in srgb, var(--color-ink-mute) 52%, var(--color-paper));
 }
 
 .entry--inactive .entry__title {
-  color: var(--color-ink-mute);
+  color: color-mix(in srgb, var(--color-ink-mute) 62%, var(--color-paper));
+  font-weight: 500;
 }
 
 /* ==========================================================================
