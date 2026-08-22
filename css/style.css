@@ -6,12 +6,13 @@
 
 :root {
   /* Palette */
-  --color-paper: #fbfaf6;
-  --color-ink: #16191a;
-  --color-ink-soft: #3c434c;
-  --color-ink-mute: #5c636e;
-  --color-line: #e5e2d8;
-  --color-line-strong: #c9c5b7;
+  --color-paper: #eef4fd;
+  --color-ink: #121a2c;          /* very dark navy — links, strong text    */
+  --color-ink-soft: #2c3a52;     /* dark gray-blue — body copy             */
+  --color-ink-mute: #5e6d86;     /* muted blue-gray — meta, captions       */
+  --color-line: #d5dfee;
+  --color-line-strong: #b7c6dc;
+  --color-heading: #2b62ab;      /* muted blue — display headings          */
   --color-accent: #f05a25;       /* brand orange: text hover, dots, arrows */
   --color-accent-blue: #3fa9f6;  /* brand blue: underline on hover         */
   --color-accent-deep: #c2410c;  /* text-safe accent: focus rings          */
@@ -90,8 +91,8 @@ body {
 }
 
 ::selection {
-  background: var(--color-accent-blue);
-  color: var(--color-ink);
+  background: var(--color-heading);
+  color: #fff;
 }
 
 :focus-visible {
@@ -200,7 +201,7 @@ li {
   flex-wrap: wrap;
   min-height: var(--nav-height);
   padding: 10px clamp(20px, 4vw, 44px);
-  background: rgba(251, 250, 246, 0.92);
+  background: rgba(238, 244, 253, 0.92);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   border-bottom: 1px solid var(--color-line);
@@ -211,7 +212,7 @@ li {
   font-weight: 500;
   font-size: 1.0625rem;
   letter-spacing: -0.01em;
-  color: var(--color-ink);
+  color: var(--color-heading);
   text-decoration: none;
   white-space: nowrap;
 }
@@ -332,7 +333,7 @@ li {
   font-weight: 500;
   line-height: 1.04;
   letter-spacing: -0.02em;
-  color: var(--color-ink);
+  color: var(--color-heading);
   text-wrap: balance;
 }
 
@@ -394,7 +395,7 @@ main {
   font-weight: 500;
   line-height: var(--leading-heading);
   letter-spacing: -0.015em;
-  color: var(--color-ink);
+  color: var(--color-heading);
   text-wrap: balance;
 }
 
@@ -510,7 +511,7 @@ main {
 .tag--postgres .tag__dot   { background-color: #336791; }
 .tag--redis .tag__dot      { background-color: #d82c20; }
 .tag--kafka .tag__dot      { background-color: #2b2b2b; }
-.tag--rest .tag__dot       { background-color: #3fa9f6; }
+.tag--rest .tag__dot       { background-color: var(--color-accent-blue); }
 .tag--grpc .tag__dot       { background-color: #244c5a; }
 .tag--oauth .tag__dot      { background-color: #f4a21b; }
 .tag--jwt .tag__dot        { background-color: #d63aff; }
