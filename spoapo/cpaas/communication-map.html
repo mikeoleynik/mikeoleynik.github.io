@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Карта коммуникации · проектирование CPaaS</title>
+    <meta name="description" content="Модель коммуникации в CPaaS: кто с кем говорит, что передаём, когда, каким сценарием — и как устроены доставка, обратная связь и compliance.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="all,follow">
+    <link rel="shortcut icon" type="image/png" href="../../img/favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Spectral:ital,wght@0,500;1,500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../css/style.css">
+  </head>
+  <body class="article-page">
+    <a class="skip-link" href="#main">Перейти к содержанию</a>
+
+    <header class="site-header">
+      <a class="site-header__mark" href="../../index.html">Михаил Олейник</a>
+
+      <nav class="site-header__nav" aria-label="Навигация">
+        <ul>
+          <li><a href="../../index.html#spoapo" aria-current="page">spoapo.</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <div class="wrapper">
+      <div class="article-layout">
+        <aside class="article-sidebar">
+          <p class="article-sidebar__label">содержание</p>
+          <nav aria-label="Содержание статьи">
+            <ol class="article-toc">
+              <li><a href="#who">WHO</a></li>
+              <li><a href="#what">WHAT</a></li>
+              <li><a href="#when">WHEN</a></li>
+              <li><a href="#how">HOW</a></li>
+              <li><a href="#delivery">DELIVERY</a></li>
+              <li><a href="#feedback">FEEDBACK</a></li>
+              <li><a href="#compliance">COMPLIANCE</a></li>
+              <li><a href="#map">Карта</a></li>
+            </ol>
+          </nav>
+
+          <p class="article-sidebar__label">в этой серии</p>
+          <ol class="article-series-nav">
+            <li aria-current="page">Карта коммуникации</li>
+            <li class="series__soon">Модель каналов</li>
+            <li class="series__soon">Сценарии коммуникации</li>
+          </ol>
+        </aside>
+
+        <div class="article-main" id="main">
+          <header class="article-hero">
+            <p class="hero__kicker">проектирование CPaaS · 01</p>
+            <h1 class="article-hero__title">Карта коммуникации</h1>
+          </header>
+
+          <article class="article-body">
+          <p>На первый взгляд CPaaS выглядит довольно простой системой.</p>
+
+          <p>Есть бизнес, который хочет отправить клиенту SMS. Он обращается к API, CPaaS отправляет сообщение оператору, а оператор доставляет его абоненту.</p>
+
+          <p>Но стоит попробовать построить реальную систему, и простой <code>send SMS</code> быстро перестаёт быть достаточным.</p>
+
+          <p>Нужно понять: кому отправлять? Что именно? Когда? Что делать, если сообщение не доставлено? А если пользователь отреагировал на него? Можно ли вообще отправлять ему сообщение?</p>
+
+          <p>Чтобы не потеряться в технических деталях, я решил сначала описать саму <strong>коммуникацию</strong>.</p>
+
+          <p>Получилась простая модель из нескольких вопросов:</p>
+
+          <pre><code>WHO    → кто с кем коммуницирует
+WHAT   → что передаём
+WHEN   → когда
+HOW    → каким сценарием</code></pre>
+
+          <p>А затем к ней добавились ещё два важных аспекта:</p>
+
+          <pre><code>DELIVERY   → как обеспечить доставку
+FEEDBACK   → что произошло с коммуникацией</code></pre>
+
+          <p>И отдельным сквозным ограничением:</p>
+
+          <pre><code>COMPLIANCE → можем ли мы вообще выполнить эту коммуникацию</code></pre>
+
+          <p>Разберёмся, откуда они взялись.</p>
+
+          <h2 id="who">WHO — кто участвует в коммуникации?</h2>
+
+          <p>У коммуникации в CPaaS есть несколько участников.</p>
+
+          <p><strong>Business</strong> — компания, которая хочет общаться со своими клиентами.</p>
+
+          <p><strong>Integrator</strong> — разработчик, который интегрирует CPaaS с системой бизнеса через API.</p>
+
+          <p><strong>Subscriber</strong> — конечный получатель сообщения.</p>
+
+          <p>Например, клиника хочет напоминать пациентам о записи:</p>
+
+          <pre><code>Клиника
+   ↓
+Integrator / API
+   ↓
+CPaaS
+   ↓
+Пациент</code></pre>
+
+          <p>Это уже помогает отделить того, <strong>кто инициирует коммуникацию</strong>, от того, <strong>кто её получает</strong>.</p>
+
+          <h2 id="what">WHAT — что мы передаём?</h2>
+
+          <p>Сначала кажется, что ответ очевиден: SMS.</p>
+
+          <p>Но SMS — это не содержание сообщения. Это способ его доставки.</p>
+
+          <p>Например, одно и то же сообщение:</p>
+
+          <blockquote>
+            <p>Иван, напоминаем о записи завтра в 19:00.</p>
+          </blockquote>
+
+          <p>можно представить в разных каналах:</p>
+
+          <pre><code>SMS
+Email
+Push
+WhatsApp</code></pre>
+
+          <p>При этом формат будет различаться:</p>
+
+          <pre><code>SMS    → короткий текст
+Email  → HTML + текст
+Push   → заголовок + текст</code></pre>
+
+          <p>Поэтому WHAT удобно разделить на два слоя:</p>
+
+          <pre><code>WHAT
+├── Content / Template
+└── Channel</code></pre>
+
+          <p>Содержание коммуникации и канал доставки должны быть независимыми.</p>
+
+          <p>Это позволяет один раз описать сообщение и затем представить его в подходящем формате для разных каналов.</p>
+
+          <h2 id="when">WHEN — когда происходит коммуникация?</h2>
+
+          <p>Следующий вопрос:</p>
+
+          <blockquote>
+            <p>Что должно произойти, чтобы сообщение было отправлено?</p>
+          </blockquote>
+
+          <p>Иногда это событие:</p>
+
+          <pre><code>appointment.created
+        ↓
+send reminder</code></pre>
+
+          <p>Иногда — время:</p>
+
+          <pre><code>Tomorrow at 09:00
+        ↓
+send reminder</code></pre>
+
+          <p>А иногда решение зависит от поведения пользователя:</p>
+
+          <pre><code>message.clicked
+        ↓
+send next message</code></pre>
+
+          <p>Поэтому WHEN описывает <strong>условия запуска коммуникации</strong>.</p>
+
+          <h2 id="how">HOW — каким сценарием она выполняется?</h2>
+
+          <p>Теперь одной отправки сообщения тоже недостаточно.</p>
+
+          <p>Представим:</p>
+
+          <pre><code>Запись создана
+      ↓
+подождать 24 часа
+      ↓
+отправить SMS
+      ↓
+подождать 2 часа
+      ↓
+проверить реакцию
+      ↓
+отправить следующее сообщение</code></pre>
+
+          <p>Это уже сценарий коммуникации.</p>
+
+          <p>Именно здесь появляется <strong>orchestration</strong>:</p>
+
+          <pre><code>HOW
+└── Orchestration</code></pre>
+
+          <p>В нём могут быть последовательности, задержки, условия, ветвления и остановки.</p>
+
+          <p>Drip Campaign — лишь один из вариантов такого сценария.</p>
+
+          <h2 id="delivery">Но что, если сообщение не доставлено?</h2>
+
+          <p>Здесь возникает отдельный вопрос.</p>
+
+          <p>Мы сказали системе:</p>
+
+          <blockquote>
+            <p>Отправь SMS.</p>
+          </blockquote>
+
+          <p>Но SMS может не доставиться.</p>
+
+          <p>Тогда коммуникация может продолжиться другим способом:</p>
+
+          <pre><code>SMS
+ ↓
+не доставлено
+ ↓
+WhatsApp
+ ↓
+не доставлено
+ ↓
+Email</code></pre>
+
+          <p>Это уже не совсем orchestration.</p>
+
+          <p>Здесь система решает, <strong>каким способом добиться доставки</strong>.</p>
+
+          <p>Поэтому появляется отдельный слой:</p>
+
+          <pre><code>DELIVERY
+└── Routing &amp; Fallback</code></pre>
+
+          <p>В нём находятся маршрутизация, приоритеты, таймауты, retry и fallback между каналами или провайдерами.</p>
+
+          <h2 id="feedback">Что произошло с коммуникацией?</h2>
+
+          <p>После отправки нам необходимо получить результат.</p>
+
+          <p>Сообщение могло быть:</p>
+
+          <pre><code>sent
+delivered
+failed</code></pre>
+
+          <p>Но этим всё не заканчивается. Пользователь мог открыть письмо, перейти по ссылке, ответить или совершить целевое действие.</p>
+
+          <p>Получается обратная связь:</p>
+
+          <pre><code>Communication
+      ↓
+   Delivery
+      ↓
+   Feedback
+      ↓
+   Decision
+      ↓
+Communication</code></pre>
+
+          <p>Поэтому коммуникация — это не одноразовое действие. Она образует цикл.</p>
+
+          <p>Этот цикл позволяет системе использовать результаты предыдущих действий для следующих.</p>
+
+          <h2 id="compliance">И последнее: можем ли мы вообще отправлять?</h2>
+
+          <p>Есть ещё один вопрос, который нельзя оставить за пределами модели:</p>
+
+          <blockquote>
+            <p>Имеем ли мы право отправлять это сообщение этому человеку этим каналом сейчас?</p>
+          </blockquote>
+
+          <p>Например:</p>
+
+          <ul class="list">
+            <li>пользователь отказался от сообщений;</li>
+            <li>для канала нет согласия;</li>
+            <li>превышен допустимый лимит частоты;</li>
+            <li>коммуникация запрещена политикой бизнеса.</li>
+          </ul>
+
+          <p>Это уже область <strong>consent management и compliance</strong>.</p>
+
+          <p>И в отличие от остальных элементов она проходит <strong>поперёк всей коммуникации</strong>:</p>
+
+          <pre><code>WHO → WHAT → WHEN → HOW → DELIVERY → FEEDBACK
+        ↑
+        │
+    COMPLIANCE</code></pre>
+
+          <h2 id="map">Получилась карта</h2>
+
+          <p>В итоге коммуникацию в CPaaS можно описать так:</p>
+
+          <pre><code>                         COMMUNICATION
+                              │
+             ┌────────────────┼────────────────┐
+             │                │                │
+            WHO              WHAT             WHEN
+             │                │                │
+       Participants     Content / Channel     Trigger
+             │                                 │
+             │                            Event / Time
+             │                            Behavioral
+             │
+             └────────────────┐
+                              │
+                             HOW
+                              │
+                       Orchestration
+                              │
+                              ▼
+                          DELIVERY
+                              │
+                       Routing / Fallback
+                              │
+                              ▼
+                          FEEDBACK
+                              │
+                    Delivery / Engagement
+
+                    COMPLIANCE
+                         │
+              ограничивает весь цикл</code></pre>
+
+          <p>Эта карта пока ничего не говорит о том, <strong>какими технологиями мы будем её реализовывать</strong>.</p>
+
+          <p>Зато она даёт нам язык для разговора о CPaaS.</p>
+
+          <p>Мы можем отдельно обсуждать участников, содержание, триггеры, сценарии, доставку и обратную связь — и постепенно превращать каждый элемент модели в конкретные возможности системы.</p>
+
+          <p>И это будет следующим шагом.</p>
+
+          <div class="article-closing">
+            <p>Теперь, когда у нас есть карта коммуникации, нужно понять: что именно должна уметь система, чтобы эту карту реализовать?</p>
+            <p>С этого и начнётся разговор о <strong>требованиях к CPaaS</strong>.</p>
+          </div>
+          </article>
+
+          <nav class="article-pager" aria-label="Навигация по серии">
+            <a class="article-pager__index" href="../../index.html#spoapo">все тексты</a>
+            <p class="article-pager__next">
+              <span class="article-pager__label">далее</span>
+              <span class="series__soon">Модель каналов</span>
+            </p>
+          </nav>
+        </div>
+      </div>
+
+      <div class="signature">
+        <img src="../../img/oleynik-signature.svg" alt="Подпись Михаила Олейника">
+      </div>
+    </div>
+
+    <script src="../../js/main.js" defer></script>
+  </body>
+</html>
