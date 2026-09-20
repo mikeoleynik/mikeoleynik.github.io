@@ -32,23 +32,30 @@
   }
 
   /* --- Scrollspy ------------------------------------------------------ */
-  var navLinks = document.querySelectorAll('.site-header__nav a[href^="#"]');
-  var linkById = {};
+  bindScrollspy('.site-header__nav a[href^="#"]');
+  bindScrollspy('.article-toc a[href^="#"]');
 
-  navLinks.forEach(function (link) {
-    var id = link.getAttribute('href').slice(1);
-    if (document.getElementById(id)) linkById[id] = link;
-  });
+  function bindScrollspy(selector) {
+    var navLinks = document.querySelectorAll(selector);
+    var linkById = {};
 
-  var spyObserver = new IntersectionObserver(function (entries) {
-    entries.forEach(function (entry) {
-      if (!entry.isIntersecting) return;
-      navLinks.forEach(function (link) { link.removeAttribute('aria-current'); });
-      linkById[entry.target.id].setAttribute('aria-current', 'true');
+    navLinks.forEach(function (link) {
+      var id = link.getAttribute('href').slice(1);
+      if (document.getElementById(id)) linkById[id] = link;
     });
-  }, { rootMargin: '-35% 0px -60% 0px' });
 
-  Object.keys(linkById).forEach(function (id) {
-    spyObserver.observe(document.getElementById(id));
-  });
+    if (!Object.keys(linkById).length) return;
+
+    var spyObserver = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (!entry.isIntersecting) return;
+        navLinks.forEach(function (link) { link.removeAttribute('aria-current'); });
+        linkById[entry.target.id].setAttribute('aria-current', 'true');
+      });
+    }, { rootMargin: '-35% 0px -60% 0px' });
+
+    Object.keys(linkById).forEach(function (id) {
+      spyObserver.observe(document.getElementById(id));
+    });
+  }
 })();
