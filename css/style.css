@@ -347,24 +347,6 @@ li {
   white-space: nowrap;
 }
 
-.hero__status {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  margin: var(--spacing-32) 0 0;
-  font-family: var(--font-mono);
-  font-size: var(--text-caption);
-  color: var(--color-ink-soft);
-}
-
-.hero__status-dot {
-  flex-shrink: 0;
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background: var(--color-accent);
-}
-
 /* ==========================================================================
    Sections — editorial two-column grid
    ========================================================================== */
